@@ -1,0 +1,288 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f1e7; /* Ivory background */
+  color: #4a4a4a; /* Calm gray */
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #a67c52; /* Warm brown */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #4a4a4a; /* Add a border for separation */
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 10px 0; /* ลดระยะห่างด้านบน */
+  display: flex; /* ใช้ Flexbox เพื่อจัดเรียงในแนวนอน */
+  justify-content: center; /* จัดไอคอนให้กึ่งกลาง */
+  gap: 8px; /* ลดระยะห่างระหว่างไอคอน */
+  flex-wrap: nowrap; /* ป้องกันการห่อหุ้มไอคอน */
+  width: 100%; /* ให้พื้นที่เต็ม */
+}
+
+nav ul li {
+  margin: 0; /* ลบ margin ออก */
+}
+
+nav ul li a {
+  display: flex; /* ทำให้ไอคอนอยู่กลาง */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* ลบขีดเส้นใต้ */
+  color: #ffffff; /* สีของไอคอน */
+  background-color: #a67c52; /* สีพื้นหลังของไอคอน */
+  width: 30px; /* ขนาดความกว้างของไอคอน */
+  height: 30px; /* ขนาดความสูงของไอคอน */
+  border-radius: 15px; /* ทำให้ไอคอนเป็นวงกลม */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* เงาของไอคอน */
+  font-size: 1.2rem; /* ขนาดตัวอักษรของไอคอน */
+  transition: background-color 0.3s, transform 0.2s; /* การเปลี่ยนสีพื้นหลังและขนาดเมื่อ hover */
+}
+
+nav ul li a:hover {
+  background-color: #4a4a4a; /* เปลี่ยนสีเมื่อ hover */
+  transform: scale(1.1); /* ขยายขนาดเล็กน้อย */
+}
+
+nav ul li a:active {
+  background-color: #d19c6a; /* เปลี่ยนสีเมื่อ active */
+}
+
+nav ul li a:focus {
+  outline: none;
+  box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.5); /* เพิ่มเงาเมื่อ focus */
+}
+
+/* เพิ่มการปรับแต่งเมื่อหน้าจอเล็ก */
+@media (max-width: 600px) {
+  nav ul {
+    justify-content: space-evenly; /* ให้ไอคอนกระจายในหน้าจอเล็ก */
+    gap: 5px; /* ลดช่องว่างระหว่างไอคอน */
+  }
+
+  nav ul li a {
+    width: 25px; /* ขนาดไอคอนในหน้าจอเล็ก */
+    height: 25px; /* ขนาดไอคอนในหน้าจอเล็ก */
+    font-size: 1rem; /* ขนาดตัวอักษรในหน้าจอเล็ก */
+  }
+}
+
+/* ถ้าหน้าจอกว้างขึ้น อาจจะใช้ไอคอนใหญ่ขึ้น */
+@media (min-width: 900px) {
+  nav ul li a {
+    width: 35px; /* ขนาดไอคอนในหน้าจอกว้าง */
+    height: 35px; /* ขนาดไอคอนในหน้าจอกว้าง */
+    font-size: 1.5rem; /* ขนาดตัวอักษรในหน้าจอกว้าง */
+  }
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #ffffff; /* White background for content area */
+  border-radius: 15px; /* Rounded corners for main content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow for effect */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 15px 0;
+  border-top: 5px solid #a67c52; /* Add border to footer */
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px; /* Rounded corners for sections */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px); /* Initially hidden */
+  animation: slideIn 0.8s forwards; /* Slide in animation */
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+section:nth-child(even) {
+  animation-delay: 0.3s;
+}
+
+section:nth-child(odd) {
+  animation-delay: 0.6s;
+}
+
+footer {
+  text-align: center;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 15px 0;
+  border-top: 5px solid #a67c52;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul li a {
+    padding: 12px 20px;
+    font-size: 18px; /* Increase font size on mobile */
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Add subtle scaling animation on hover for mobile */
+  nav ul li a:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+}
+
+a {
+  color: #a67c52; /* Set color for all links */
+}
+
+a:hover {
+  color: #4a4a4a;
+}
+
+button {
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a4a4a;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+button:active {
+  background-color: #d19c6a;
+  transform: scale(1.05); /* Enlarge a bit when clicked */
+}
+
+.video-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow around video */
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-description {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  nav ul li a {
+    padding: 12px 20px;
+    font-size: 18px; /* Increase font size on mobile */
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .video-description {
+    font-size: 1rem;
+  }
+}
+
+/* สไตล์ข้อความและโครงสร้าง */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* สไตล์ของลูกศร */
+.arrow-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.arrow {
+    font-size: 50px;
+    color: #4CAF50; /* เปลี่ยนสีให้เป็นสีเขียวเข้ากับธีม */
+    animation: bounceUp 1s infinite;
+}
+
+/* อนิเมชั่นลูกศรเด้งขึ้น */
+@keyframes bounceUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}

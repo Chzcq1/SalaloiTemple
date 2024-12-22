@@ -1,0 +1,37 @@
+/* สไตล์สำหรับทีม */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.team-role {
+    font-size: 14px;
+    color: #777;
+}
+
+.teacher-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-top: 20px;
+}

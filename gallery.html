@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="Css/styles.css">
+  <link rel="stylesheet" href="Css/Gallery.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Gallery</h1>
+    <nav>
+      <ul>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i></a></li>
+        <li><a href="video.html"><i class="fas fa-video"></i></a></li>
+        <li><a href="gallery.html"><i class="fas fa-camera"></i></a></li>
+        <li><a href="map.html"><i class="fas fa-map-marker-alt"></i></a></li>
+        <li><a href="team.html"><i class="fas fa-users"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+        <main>
+                <div class="slider" data-slider="gallery1">
+            <section class="content">
+              <h2>Photo Gallery</h2>
+             <!-- <p>
+                 Atmospheric image at Sala Loi Temple
+              </p> -->
+              
+              <div class="slider">
+                <div class="slides">
+                  <img src="https://img2.pic.in.th/pic/IMG_0695b6973384363b8ce4.jpeg" alt="Image 1">
+                  <img src="https://img2.pic.in.th/pic/IMG_241356ca261f9570d3ed.jpeg" alt="Image 2">
+                  <img src="https://img2.pic.in.th/pic/IMG_072484f0afd37fb898c5.jpeg" alt="Image 3">
+                  <img src="https://img2.pic.in.th/pic/IMG_7009698399fddbc21a3d.jpeg" alt="Image 4">
+                  <img src="https://img2.pic.in.th/pic/IMG_70070ea8c8f799f1a815.jpeg" alt="Image 5">
+                  <img src="https://img2.pic.in.th/pic/IMG_240900514ceb1a3c0bae.jpeg" alt="Image 6">
+                  <img src="https://img2.pic.in.th/pic/IMG_23988a2a16103e08574f.jpeg" alt="Image 7">
+                  <img src="https://img2.pic.in.th/pic/IMG_237723cd1f3622a97592.jpeg" alt="Image 8">
+                  <img src="https://img2.pic.in.th/pic/IMG_2379184bd0ece3148123.jpeg" alt="Image 9">
+                  <img src="https://img2.pic.in.th/pic/IMG_237685517de40bb92dbd.jpeg" alt="Image 10">
+                  <img src="https://img2.pic.in.th/pic/IMG_23753091fde20b5a1f59.jpeg" alt="Image 11">
+                  <img src="https://img2.pic.in.th/pic/IMG_23705208da5d8e0ea479.jpeg" alt="Image 12">
+                  <img src="https://img2.pic.in.th/pic/IMG_23451e73e5979e5d327d.jpeg" alt="Image 13">
+                  <img src="https://img2.pic.in.th/pic/IMG_2368536efa091e460de6.jpeg" alt="Image 14">
+                  <img src="https://img2.pic.in.th/pic/IMG_2352a093d412acbf2464.jpeg" alt="Image 15">
+                </div>
+                <button class="prev" data-slider="gallery1" onclick="moveSlide(-1, 'gallery1')">&#10094;</button>
+                <button class="next" data-slider="gallery1" onclick="moveSlide(1, 'gallery1')">&#10095;</button>
+              </div>
+            </section>
+          </div>
+
+          <div class="container" id="gallery">
+            <section class="content"> 
+              <h2>Selfie</h2>
+              <!-- <p> Selfie in Sala Loi temple</p> -->
+              <div class="slider" data-slider="gallery2">
+                <div class="slides">
+                  <img src="https://img2.pic.in.th/pic/IMG_2353f327e496a8444d9d.jpeg" alt="Selfie 1">
+                  <img src="https://img2.pic.in.th/pic/IMG_2348f75cc0df2edd5070.jpeg" alt="Selfie 2">
+                  <img src="https://img2.pic.in.th/pic/IMG_235630fe96692905645b.jpeg" alt="Selfie 3">
+                  <img src="https://img2.pic.in.th/pic/IMG_2362c3ddebedab101931.jpeg" alt="Selfie 4">
+                  <img src="https://img2.pic.in.th/pic/IMG_2382f261095475bd5ce8.jpeg" alt="Selfie 5">
+                  <img src="https://img2.pic.in.th/pic/IMG_23865c3a211770fab320.jpeg" alt="Selfie 6">
+                  <img src="https://img2.pic.in.th/pic/IMG_2384e4aa000d37406e79.jpeg" alt="Selfie 7">
+                  <img src="https://img2.pic.in.th/pic/IMG_2390573255296a8c0181.jpeg" alt="Selfie 8">
+                  <img src="https://img2.pic.in.th/pic/IMG_240851cb14332998bf16.jpeg" alt="Selfie 9">
+                  <img src="https://img2.pic.in.th/pic/IMG_700513814de228a35833.jpeg" alt="Selfie 10">
+                  <img src="https://img2.pic.in.th/pic/IMG_7014d7560747e4d6febd.jpeg" alt="Selfie 11">
+                  <img src="https://img2.pic.in.th/pic/IMG_70010c186268f54e248b.jpeg" alt="Selfie 12">
+                  </div>
+                <button class="prev" data-slider="gallery2" onclick="moveSlide(-1, 'gallery2')">&#10094;</button>
+                <button class="next" data-slider="gallery2" onclick="moveSlide(1, 'gallery2')">&#10095;</button>
+                  </div>
+                  </section>
+                  </div>
+        </main>
+
+  <footer>
+    <p>&copy; 2024 Sala Loi Temple Project. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="Gallery.js"></script>
+  </body>
+</html>
